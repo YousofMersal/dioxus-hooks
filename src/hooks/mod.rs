@@ -6,9 +6,11 @@ mod use_local_storage;
 mod use_session_storage;
 
 use self::storage_iter::{on_storage, UseStorageData};
-pub use self::{builder::UseStorageBuilder, storage_iter::StorageIter, use_local_storage::UseLocalStorage};
+pub use self::{
+    builder::UseStorageBuilder, storage_iter::StorageIter, use_local_storage::UseLocalStorage,
+};
 use crate::hooks::use_session_storage::UseSessionStorage;
-use dioxus::core::ScopeState;
+use dioxus::prelude::ScopeState;
 use gloo_events::EventListener;
 use log::{info, warn};
 use std::{
